@@ -1,0 +1,27 @@
+<section class="hero">
+    <div class="hero-content">
+        <h2>Discover Your Next Adventure</h2>
+        <p>Explore the world with our curated travel experiences</p>
+        <a href="/trips" class="cta-button">View All Trips</a>
+    </div>
+</section>
+
+<section class="featured-trips">
+    <h3>Featured Trips</h3>
+    <div class="trip-grid">
+        {{#each featuredTrips}}
+        <div class="trip-card">
+            <img src="{{this.image}}" alt="{{this.title}}">
+            <div class="trip-info">
+                <h4>{{this.title}}</h4>
+                <p>{{this.description}}</p>
+                <div class="trip-details">
+                    <span class="price">${{this.price}}</span>
+                    <span class="duration">{{this.duration}}</span>
+                </div>
+                <button class="book-button">Book Now</button>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</section>

@@ -1,0 +1,25 @@
+<section class="trips-header">
+    <h2>All Available Trips</h2>
+    <p>Choose from our carefully selected travel experiences</p>
+</section>
+
+<section class="all-trips">
+    <div class="trip-list">
+        {{#each trips}}
+        <div class="trip-item">
+            <div class="trip-image">
+                <img src="{{this.image}}" alt="{{this.title}}">
+            </div>
+            <div class="trip-content">
+                <h3>{{this.title}}</h3>
+                <p>{{this.description}}</p>
+                <div class="trip-meta">
+                    <span class="trip-price">${{this.price}}</span>
+                    <span class="trip-duration">{{this.duration}}</span>
+                </div>
+                <button class="trip-book-btn">Book This Trip</button>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</section>
